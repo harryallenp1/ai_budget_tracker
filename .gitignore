@@ -1,0 +1,34 @@
+# Bytecode & Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files
+.venv/
+env/
+*.env
+
+# macOS system files
+.DS_Store
+
+# Editor config
+.vscode/
+.idea/
+
+# Data and temporary files
+*.log
+*.bak
+*.tmp
+*.swp
+
+# Output folders/files
+data/*.txt
+data/*.csv
+reports/*.txt
+reports/*.csv
+*.xlsx
+ocr_output_*.txt
+mistral_expense_report.txt
+
+# Jupyter notebooks (optional)
+*.ipynb_checkpoints/
