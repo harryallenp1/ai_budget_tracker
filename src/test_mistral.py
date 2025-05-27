@@ -4,6 +4,7 @@ import textwrap
 from collections import defaultdict
 import os
 import datetime
+from excel_writer import save_to_excel
 
 # Save result to a timestamped report
 def save_report(text, folder="reports"):
@@ -118,6 +119,7 @@ if __name__ == "__main__":
     print("\n📊 AI Expense Breakdown:\n")
     print(textwrap.indent(result.strip(), "  "))
     save_report(result.strip())
+    save_to_excel(result)
 
     # 📊 Add category-wise summary
     category_totals, total_spent, total_refunded = summarize_categories(result)

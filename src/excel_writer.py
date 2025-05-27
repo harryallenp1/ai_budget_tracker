@@ -1,15 +1,34 @@
 import pandas as pd
-from openpyxl import Workbook
-from openpyxl.utils.dataframe import dataframe_to_rows
+import os
 
-def write_to_excel(rows, output_file="output.xlsx", sheet_name="April 2025"):
-    df = pd.DataFrame(rows, columns=["Date", "Description", "Category", "Rephrased", "Amount"])
+def save_to_excel(parsed_text, filename="reports/expense_report.xlsx"):
+    entries = []
+    current_entry = {}
 
-    wb = Workbook()
-    ws = wb.active
-    ws.title = sheet_name
+    for line in parsed_text.splitlines():
+        line = line.strip()
 
-    for r in dataframe_to_rows(df, index=False, header=True):
-        ws.append(r)
+        if line.startswith("Date:"):
+            current_entry["Date"] = line.split(":", 1)[1].strip()
+        elif line.startswith("Vendor:"):
+            current_entry["Vendor"] = line.split(":", 1)[1].strip()
+        elif line.startswith("Amount:"):
+            try:
+                current_entry["Amount"] = float(line.split(":", 1)[1].strip())
+            except ValueError:
+                current_entry["Amount"] = None
+        elif line.startswith("Category:"):
+            current_entry["Category"] = line.split(":", 1)[1].strip()
+        elif line.startswith("Rephrased:"):
+            current_entry["Rephrased"] = line.split(":", 1)[1].strip()
+            entries.append(current_entry)
+            current_entry = {}
 
-    wb.save(output_file)
+    if not entries:
+        print("⚠️ No entries to write to Excel.")
+        return
+
+    df = pd.DataFrame(entries)
+    os.makedirs("reports", exist_ok=True)
+    df.to_excel(filename, index=False)
+    print(f"📁 Excel report saved to {filename}")
