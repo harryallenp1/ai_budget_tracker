@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import datetime
 
 def save_to_excel(parsed_text, filename="reports/expense_report.xlsx"):
     entries = []
@@ -10,8 +11,18 @@ def save_to_excel(parsed_text, filename="reports/expense_report.xlsx"):
 
         if line.startswith("Date:"):
             current_entry["Date"] = line.split(":", 1)[1].strip()
+        
         elif line.startswith("Vendor:"):
-            current_entry["Vendor"] = line.split(":", 1)[1].strip()
+            vendor = line.split(":", 1)[1].strip()
+
+            if "KLARNA" in vendor and "WALMART" in vendor:
+                vendor = "WALMART"
+            elif "UBER" in vendor and "UBEREATS" in vendor:
+                vendor = "UBER EATS"
+            elif "UBER CANADA" in vendor:
+                vendor = "UBER RIDE"
+
+            current_entry["Vendor"] = vendor
         elif line.startswith("Amount:"):
             try:
                 current_entry["Amount"] = float(line.split(":", 1)[1].strip())
@@ -30,5 +41,8 @@ def save_to_excel(parsed_text, filename="reports/expense_report.xlsx"):
 
     df = pd.DataFrame(entries)
     os.makedirs("reports", exist_ok=True)
+    
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"reports/expense_report_{timestamp}.xlsx"
     df.to_excel(filename, index=False)
     print(f"📁 Excel report saved to {filename}")
