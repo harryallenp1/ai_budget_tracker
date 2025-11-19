@@ -1,63 +1,40 @@
-📊 AI Budget Tracker
+<div align="center">
 
-An intelligent budgeting assistant that uses Mistral LLM to understand your credit card statements, extract transactions, and categorize expenses. Paste transaction text or use OCR on images — get structured insights, rephrased descriptions, and category-wise spending breakdowns.
+# 🧠 AI Budget Tracker 💸  
+*Your intelligent assistant for expense tracking & transaction insights*
 
-⸻
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=flat&logo=python&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Mistral-success?style=flat&logo=OpenAI&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-data--analysis-yellowgreen?style=flat&logo=pandas)
+![Excel Export](https://img.shields.io/badge/Excel-Reports-green?style=flat&logo=microsoft-excel)
 
-🚀 Features
-	•	🔎 Text or OCR input support
-	•	🤖 AI-driven extraction with date, vendor, amount, and category
-	•	💬 Natural language summary of each transaction
-	•	📊 Total spending per category
-	•	📝 Saves structured report to text file
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&center=true&vCenter=true&width=450&lines=Extract+transactions+from+statements...;Categorize+spending+with+AI...;Export+to+Excel+in+seconds!+📊" alt="Typing SVG" />
 
-⸻
+</div>
 
-🛠️ Requirements
-	•	Python 3.8+
-	•	Ollama (to run Mistral locally)
-	•	Tesseract (optional, for OCR)
-	•	Install dependencies:
+---
 
-    ```pip install -r requirements.txt```
+## 🚀 Features
 
-🧠 Mistral Setup (via Ollama)
-1.	Install Ollama: https://ollama.com/download
-2.	Pull the Mistral model:
-    
-    ```ollama pull mistral```
+✨ Paste plain-text or scanned statements (OCR support)  
+🧠 AI-powered categorization and vendor rephrasing  
+📊 Clean summaries of your spending habits  
+📁 Export structured reports to Excel with date/vendor/amount/category  
+📂 Works offline with Ollama + Mistral  
 
-3.  Run Mistral:
+---
 
-    ```ollama run mistral```
+## 🖥️ Demo
 
+<p align="center">
+  <img src="https://media.giphy.com/media/xT9DPnElp7FONmVh8U/giphy.gif" width="500px" alt="AI Budget Tracker Demo"/>
+</p>
 
-📸 OCR for Scanned Statements (optional)
+---
 
-To extract text from images:
-📥 How to Use
-	1.	Run the script:
-       ```python3 mistral_budget_parser.py```
-    
-    2.	Paste your transaction list (e.g.):
-       ``` Apr 01 Apr 02 UBER CANADA TORONTO ON Restaurants 22.08
-           Apr 09 Apr 10 KLARNA* WALMART VANCOUVER BC Retail and Grocery 14.26```
+## 🛠 Requirements
 
-    3.	Press Enter twice
-	
-    4.	Output:
-
-	•	Clean summary of transactions
-	•	Totals by category
-	•	File saved to mistral_expense_report.txt
-
-⸻
-
-📂 Folder Structure
-ai_budget_tracker/
-│
-├── mistral_budget_parser.py      ← Main script
-├── requirements.txt
-├── statement_apr2025.png         ← (optional image file)
-├── ocr_output_apr2025.txt        ← (optional OCR text output)
-├── mistral_expense_report.txt    ← Final AI-generated report
+```bash
+Python 3.8+
+Ollama (for local Mistral)
+Tesseract OCR (optional)
