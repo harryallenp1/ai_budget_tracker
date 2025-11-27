@@ -8,8 +8,11 @@
 ![Pandas](https://img.shields.io/badge/pandas-data--analysis-yellowgreen?style=flat&logo=pandas)
 ![Excel Export](https://img.shields.io/badge/Excel-Reports-green?style=flat&logo=microsoft-excel)
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&center=true&vCenter=true&width=450&lines=Extract+transactions+from+statements...;Categorize+spending+with+AI...;Export+to+Excel+in+seconds!+📊" alt="Typing SVG" />
+## 🎥 Live Demo Preview
 
+See the AI Budget Tracker in action:
+
+![AI Budget Tracker Demo](demo.gif)
 </div>
 
 ---
