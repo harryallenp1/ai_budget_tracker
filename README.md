@@ -12,7 +12,6 @@
 
 See the AI Budget Tracker in action:
 
-![AI Budget Tracker Demo](demo.gif)
 </div>
 
 ---
@@ -31,6 +30,8 @@ See the AI Budget Tracker in action:
 
 <p align="center">
   <img src="https://media.giphy.com/media/xT9DPnElp7FONmVh8U/giphy.gif" width="500px" alt="AI Budget Tracker Demo"/>
+  
+![AI Budget Tracker Demo](demo.gif)
 </p>
 
 ---
