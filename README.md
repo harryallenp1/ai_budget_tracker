@@ -8,10 +8,6 @@
 ![Pandas](https://img.shields.io/badge/pandas-data--analysis-yellowgreen?style=flat&logo=pandas)
 ![Excel Export](https://img.shields.io/badge/Excel-Reports-green?style=flat&logo=microsoft-excel)
 
-## 🎥 Live Demo Preview
-
-See the AI Budget Tracker in action:
-
 </div>
 
 ---
@@ -28,12 +24,10 @@ See the AI Budget Tracker in action:
 
 ## 🖥️ Demo
 
+<h2>🎥 Live Demo Preview</h2>
 <p align="center">
-  <img src="https://media.giphy.com/media/xT9DPnElp7FONmVh8U/giphy.gif" width="500px" alt="AI Budget Tracker Demo"/>
-  
-![AI Budget Tracker Demo](demo.gif)
+  <img src="demo.gif" width="800"/>
 </p>
-
 ---
 
 ## 🛠 Requirements
