@@ -21,14 +21,11 @@
 📂 Works offline with Ollama + Mistral  
 
 ---
+### 🎬 Live Demo
 
-## 🖥️ Demo
+[![Watch the demo](https://img.youtube.com/vi/nLeJTOa5qwM/hqdefault.jpg)](https://youtu.be/nLeJTOa5qwM)
 
-<h2>🎥 Live Demo Preview</h2>
-<p align="center">
-  <img src="demo.gif" width="800"/>
-</p>
----
+📌 **Click the image above** to watch a full walkthrough of the AI Budget Tracker in action.
 
 ## 🛠 Requirements
 
